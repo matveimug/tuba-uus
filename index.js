@@ -16,6 +16,7 @@ new Vue({
       <Scene>
         <template v-slot:assets>
           <a-assets>
+          
             <a-asset-item id="chandelier" src="./assets/models/Artichoke_Lamp.obj"></a-asset-item>
             <a-asset-item id="chandelier-mtl" src="./assets/models/Artichoke_Lamp.mtl"></a-asset-item>
 

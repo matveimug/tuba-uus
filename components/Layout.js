@@ -3,8 +3,5 @@ export default {
         <main class="container">
           <slot />
         </main>
-    `,
-    css: `
-    
     `
 }
