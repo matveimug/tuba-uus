@@ -25,6 +25,7 @@ new Vue({
             
           </a-assets>
         </template>
+        <a-entity oculus-go-controls></a-entity>
         <Ceiling position="0 5 0">
           <a-entity material="color: white; emissive: yellow; emissiveIntensity: 2" class="chandelier" position="0 -4.595 0" scale="0.023 0.023 0.023" obj-model="obj: #chandelier"></a-entity>  
           <a-entity light="type: point; intensity: 0.6; color: #ffffaa; castShadow: true;"  position="0 -1.5 0"></a-entity>
