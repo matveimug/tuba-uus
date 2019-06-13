@@ -30,6 +30,7 @@ new Vue({
         <Rig>
           <!-- Rig-i sisse võib panna asju, mis peaks liikuma koos kaameraga, märksõna HUD -->
           <!-- Hetkel on siin tekstid, mis muutuvad nähtavaks, kui vaatad õige asja peale -->
+          <a-text id="pilditekst" value="see on see uuem pilt" width="1" align="center" color="#FFF" visible="false" position="0 -0.05 -0.5" />
           <a-text id="kuubikutekst" value="see on kuubik" width="1" align="center" color="#FFF" visible="false" position="0 -0.05 -0.5" />
           <a-text id="plakatitekst" value="see on plakat" width="1" align="center" color="#FFF" visible="false" position="0 -0.05 -0.5" />
         </Rig>
@@ -43,24 +44,42 @@ new Vue({
           <!-- seina komponenti on muudetud nii, et tema 'sisse' saab panna asju, mis peaks ta peal rippuma, vaikimisi täpselt keskel -->
           <!-- allpoolse a-plane-i küljes on evendid e. sündmused, mis muudavad selle peale vaadates õige teksti nähtavaks (ja ka nähtamatuks) -->
           <a-plane 
-              class="hover" scale="2 3 0"
-              shadow="cast: true" 
+              position="-2 0 0"
+              scale="2 3 0"
               material="src: ./assets/images/plakat.jpg"
-
+              shadow="cast: true" 
+          
+              class="hover" 
               event-set__enter="_event: mouseenter; _target: #plakatitekst; visible: true"
               event-set__leave="_event: mouseleave; _target: #plakatitekst; visible: false"
+          ></a-plane>
+          <a-plane
+              position="2 0 0" 
+              scale="2 2 0"
+              material="src: ./assets/images/pilt.jpg"
+              shadow="cast: true"
 
+              class="hover" 
+              event-set__enter="_event: mouseenter; _target: #pilditekst; visible: true"
+              event-set__leave="_event: mouseleave; _target: #pilditekst; visible: false"
           ></a-plane>
         </Wall>
-      	<Wall position="-5 0 0" rotation="0 90 0"/>
-      	<Wall position="5 0 0" rotation="0 -90 0"/>
-        <Wall position="0 0 5" rotation="0 -180 0"/>
+        <Wall position="-5 0 0" rotation="0 90 0"/>
+          <a-plane
+                position="2 0 0" 
+                scale="2 2 0"
+                material="src: ./assets/images/pilt.jpg"
+                shadow="cast: true"
+            ></a-plane>
+        </Wall>
+      	<Wall position="5 0 0" rotation="0 -90 0"/></Wall>
+        <Wall position="0 0 5" rotation="0 -180 0"/></Wall>
         <Box  class="hover"
               position="1 0.5 0" 
               shadow="cast: true" 
 
-              event-set__enter="_event: mouseenter; _target: #kuubikutekst; visible: true"
-              event-set__leave="_event: mouseleave; _target: #kuubikutekst; visible: false"
+              event-set__enter="_event: mouseenter; color: red"
+              event-set__leave="_event: mouseleave; color: blue"
               
                />
         <Floor />
