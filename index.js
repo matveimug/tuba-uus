@@ -9,15 +9,15 @@ import Rig from "./components/Rig.js";
 new Vue({
   el: "#app",
   components: { Layout, Scene, Box, Wall, Floor, Ceiling, Rig },
-  data: () => ({
-    wallHeight: 3
-  }),
   template: `
     <Layout>
       <Scene>
         <template v-slot:assets>
           <a-assets>
-          
+            <!-- siin tõmbame sisse väliseid mudeleid -->
+            <a-asset-item id="mannekeen" src="./assets/models/mannequin.obj"></a-asset-item>
+            <a-asset-item id="mannekeen-mtl" src="./assets/models/mannequin.mtl"></a-asset-item>
+
             <a-asset-item id="chandelier" src="./assets/models/Artichoke_Lamp.obj"></a-asset-item>
             <a-asset-item id="chandelier-mtl" src="./assets/models/Artichoke_Lamp.mtl"></a-asset-item>
 
@@ -30,7 +30,10 @@ new Vue({
         <Rig>
           <!-- Rig-i sisse võib panna asju, mis peaks liikuma koos kaameraga, märksõna HUD -->
           <!-- Hetkel on siin tekstid, mis muutuvad nähtavaks, kui vaatad õige asja peale -->
-          <a-text id="pilditekst" value="see on see uuem pilt" width="1" align="center" color="#FFF" visible="false" position="0 -0.05 -0.5" />
+          <a-entity id="pilditekst" visible="false" position="0 -0.2 -0.5">
+            <a-text value="see on see uuem pilt" width="1" align="center" color="black" />
+            <a-plane material="shader: flat" color="white" scale="0.5 0.1 0" />
+          </a-entity>
           <a-text id="kuubikutekst" value="see on kuubik" width="1" align="center" color="#FFF" visible="false" position="0 -0.05 -0.5" />
           <a-text id="plakatitekst" value="see on plakat" width="1" align="center" color="#FFF" visible="false" position="0 -0.05 -0.5" />
         </Rig>
@@ -40,6 +43,8 @@ new Vue({
           <a-entity light="type: point; intensity: 0.6; color: #ffffaa; castShadow: true;"  position="0 -1.5 0"></a-entity>
           <a-entity light="type: ambient; intensity: 0.5; color: #ffffaa"></a-entity>
         </Ceiling>
+        <!-- blenderist imporditud .obj-mudel koos .mtl-materjalidega; vt a-assets ülalpool -->
+        <a-entity class="mannekeen" obj-model="obj: #mannekeen; mtl: #mannekeen-mtl "></a-entity>
       	<Wall position="0 0 -5">
           <!-- seina komponenti on muudetud nii, et tema 'sisse' saab panna asju, mis peaks ta peal rippuma, vaikimisi täpselt keskel -->
           <!-- allpoolse a-plane-i küljes on evendid e. sündmused, mis muudavad selle peale vaadates õige teksti nähtavaks (ja ka nähtamatuks) -->
@@ -64,16 +69,15 @@ new Vue({
               event-set__leave="_event: mouseleave; _target: #pilditekst; visible: false"
           ></a-plane>
         </Wall>
-        <Wall position="-5 0 0" rotation="0 90 0"/>
+        <Wall position="-5 0 0" rotation="0 90 0">
           <a-plane
-                position="2 0 0" 
                 scale="2 2 0"
                 material="src: ./assets/images/pilt.jpg"
                 shadow="cast: true"
             ></a-plane>
         </Wall>
-      	<Wall position="5 0 0" rotation="0 -90 0"/></Wall>
-        <Wall position="0 0 5" rotation="0 -180 0"/></Wall>
+      	<Wall position="5 0 0" rotation="0 -90 0">  </Wall>
+        <Wall position="0 0 5" rotation="0 -180 0">  </Wall>
         <Box  class="hover"
               position="1 0.5 0" 
               shadow="cast: true" 
