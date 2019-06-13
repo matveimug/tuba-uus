@@ -4,10 +4,11 @@ import Box from "./components/Box.js";
 import Wall from "./components/Wall.js";
 import Floor from "./components/Floor.js";
 import Ceiling from "./components/Ceiling.js";
+import Rig from "./components/Rig.js";
 
 new Vue({
   el: "#app",
-  components: { Layout, Scene, Box, Wall, Floor, Ceiling },
+  components: { Layout, Scene, Box, Wall, Floor, Ceiling, Rig },
   data: () => ({
     wallHeight: 3
   }),
@@ -25,33 +26,30 @@ new Vue({
             
           </a-assets>
         </template>
-        <a-entity id="rig" position="0 0 3">
-          <a-camera>
-              <a-entity 
-                cursor="fuse:true, fuseTimeout: 50;" raycaster="far: 10; objects: .hover"
-                position="0 0 -1"
-                geometry="primitive: circle; radius: 0.005;"
-                material="color: white; shader: flat; opacity: 0.5"
-                >
-              </a-entity>
-              <a-text id="kuubikutekst" value="see on kuubik" width="1" align="center" color="#FFF" visible="false" position="0 -0.05 -0.5" />
-              <a-text id="plakatitekst" value="see on plakat" width="1" align="center" color="#FFF" visible="false" position="0 -0.05 -0.5" />
-          </a-camera>
-          <!-- <a-entity position="0 0 4" oculus-go-controls="model: false"></a-entity> -->
-          <!-- <a-entity laser-controls="hand: right"></a-entity> -->
-        </a-entity>
+        <!-- uus komponent Rig, kus sees on kõik kaameraga seonduv. -->
+        <Rig>
+          <!-- Rig-i sisse võib panna asju, mis peaks liikuma koos kaameraga, märksõna HUD -->
+          <!-- Hetkel on siin tekstid, mis muutuvad nähtavaks, kui vaatad õige asja peale -->
+          <a-text id="kuubikutekst" value="see on kuubik" width="1" align="center" color="#FFF" visible="false" position="0 -0.05 -0.5" />
+          <a-text id="plakatitekst" value="see on plakat" width="1" align="center" color="#FFF" visible="false" position="0 -0.05 -0.5" />
+        </Rig>
+        <!-- -->
         <Ceiling position="0 5 0">
           <a-entity material="color: white; emissive: yellow; emissiveIntensity: 2" class="chandelier" position="0 -4.595 0" scale="0.023 0.023 0.023" obj-model="obj: #chandelier"></a-entity>  
           <a-entity light="type: point; intensity: 0.6; color: #ffffaa; castShadow: true;"  position="0 -1.5 0"></a-entity>
           <a-entity light="type: ambient; intensity: 0.5; color: #ffffaa"></a-entity>
         </Ceiling>
       	<Wall position="0 0 -5">
+          <!-- seina komponenti on muudetud nii, et tema 'sisse' saab panna asju, mis peaks ta peal rippuma, vaikimisi täpselt keskel -->
+          <!-- allpoolse a-plane-i küljes on evendid e. sündmused, mis muudavad selle peale vaadates õige teksti nähtavaks (ja ka nähtamatuks) -->
           <a-plane 
               class="hover" scale="2 3 0"
               shadow="cast: true" 
-              material="src: ./assets/images/plakat.jpg" 
+              material="src: ./assets/images/plakat.jpg"
+
               event-set__enter="_event: mouseenter; _target: #plakatitekst; visible: true"
               event-set__leave="_event: mouseleave; _target: #plakatitekst; visible: false"
+
           ></a-plane>
         </Wall>
       	<Wall position="-5 0 0" rotation="0 90 0"/>
@@ -60,8 +58,10 @@ new Vue({
         <Box  class="hover"
               position="1 0.5 0" 
               shadow="cast: true" 
+
               event-set__enter="_event: mouseenter; _target: #kuubikutekst; visible: true"
               event-set__leave="_event: mouseleave; _target: #kuubikutekst; visible: false"
+              
                />
         <Floor />
       </Scene>
