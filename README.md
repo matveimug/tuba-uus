@@ -1,5 +1,5 @@
 # Madise tuba
-## https://aframe.io/docs/
+### https://aframe.io/docs/
 Põhineb [aframe-vue-boilerplate](https://github.com/matveimug/aframe-vue-boilerplate)-il; [demo](https://matveimug.github.io/tuba-uus/).
 
 ### Kui ei tööta:
