@@ -11,8 +11,8 @@ export default {
               </a-entity>
               <slot />
           </a-camera>
-          <!-- <a-entity position="0 0 4" oculus-go-controls="model: false"></a-entity> -->
-          <!-- <a-entity laser-controls="hand: right"></a-entity> -->
+          <a-entity position="0 0 4" oculus-go-controls="model: false"></a-entity>
+          <a-entity laser-controls="hand: right"></a-entity>
         </a-entity>
     `
 };

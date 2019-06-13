@@ -20,12 +20,11 @@ new Vue({
 
             <a-asset-item id="chandelier" src="./assets/models/Artichoke_Lamp.obj"></a-asset-item>
             <a-asset-item id="chandelier-mtl" src="./assets/models/Artichoke_Lamp.mtl"></a-asset-item>
-
-            <a-asset-item id="standing" src="./assets/models/standing_model.obj"></a-asset-item>
-            <a-asset-item id="standing-mtl" src="./assets/models/standing_materials.mtl"></a-asset-item>
-            
+  
           </a-assets>
         </template>
+        <!-- blenderist imporditud .obj-mudel koos .mtl-materjalidega; vt a-assets ülalpool -->
+        <a-entity class="mannekeen" obj-model="obj: #mannekeen; mtl: #mannekeen-mtl "></a-entity>
         <!-- uus komponent Rig, kus sees on kõik kaameraga seonduv. -->
         <Rig>
           <!-- Rig-i sisse võib panna asju, mis peaks liikuma koos kaameraga, märksõna HUD -->
@@ -43,8 +42,6 @@ new Vue({
           <a-entity light="type: point; intensity: 0.6; color: #ffffaa; castShadow: true;"  position="0 -1.5 0"></a-entity>
           <a-entity light="type: ambient; intensity: 0.5; color: #ffffaa"></a-entity>
         </Ceiling>
-        <!-- blenderist imporditud .obj-mudel koos .mtl-materjalidega; vt a-assets ülalpool -->
-        <a-entity class="mannekeen" obj-model="obj: #mannekeen; mtl: #mannekeen-mtl "></a-entity>
       	<Wall position="0 0 -5">
           <!-- seina komponenti on muudetud nii, et tema 'sisse' saab panna asju, mis peaks ta peal rippuma, vaikimisi täpselt keskel -->
           <!-- allpoolse a-plane-i küljes on evendid e. sündmused, mis muudavad selle peale vaadates õige teksti nähtavaks (ja ka nähtamatuks) -->
@@ -75,6 +72,7 @@ new Vue({
                 material="src: ./assets/images/pilt.jpg"
                 shadow="cast: true"
             ></a-plane>
+            <a-text font="https://cdn.aframe.io/fonts/DejaVu-sdf.fnt" position="0 -1.2 0" value="untitled, 2019. Hõbetrükk." align="center" />
         </Wall>
       	<Wall position="5 0 0" rotation="0 -90 0">  </Wall>
         <Wall position="0 0 5" rotation="0 -180 0">  </Wall>
