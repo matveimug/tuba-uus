@@ -23,7 +23,7 @@ Kui Chrome-is ei tööta, mine aadressile `chrome://flags/`, kirjuta sealsesse o
 
 - aframe - https://aframe.io/docs/  
 - kool - https://aframe.io/aframe-school/#/  
-- lisad - https://github.com/supermedium/superframe  
+- LISAD - https://github.com/supermedium/superframe  
 - https://aframe.io/blog/awoa-170-172/ - week of aframe  
 
 # Insp:
