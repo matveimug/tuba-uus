@@ -26,6 +26,11 @@ Kui Chrome-is ei tööta, mine aadressile `chrome://flags/`, kirjuta sealsesse o
 - LISAD - https://github.com/supermedium/superframe  
 - https://aframe.io/blog/awoa-170-172/ - week of aframe  
 
+# Valmis 3d-objektid
+
+- https://poly.google.com/blocks - google blocks
+- https://github.com/supermedium/aframe-environment-component - aframe keskkonnad
+
 # Insp:
 
 ## upcoming:
