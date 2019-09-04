@@ -1,4 +1,4 @@
-# Madise tuba
+# VR-portfolio
 [Demo](https://matveimug.github.io/tuba-uus/). Põhineb [aframe-vue-boilerplate](https://github.com/matveimug/aframe-vue-boilerplate)-il.
 
 ### Kui ei tööta:
