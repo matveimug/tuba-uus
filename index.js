@@ -37,11 +37,11 @@ new Vue({
           <a-text id="plakatitekst" value="see on plakat" width="1" align="center" color="#FFF" visible="false" position="0 -0.05 -0.5" />
         </Rig>
         <!-- -->
-        <Ceiling position="0 5 0">
+        <!-- <Ceiling position="0 5 0">
           <a-entity material="color: white; emissive: yellow; emissiveIntensity: 2" class="chandelier" position="0 -4.595 0" scale="0.023 0.023 0.023" obj-model="obj: #chandelier"></a-entity>  
           <a-entity light="type: point; intensity: 0.6; color: #ffffaa; castShadow: true;"  position="0 -1.5 0"></a-entity>
           <a-entity light="type: ambient; intensity: 0.5; color: #ffffaa"></a-entity>
-        </Ceiling>
+        </Ceiling> -->
       	<Wall position="0 0 -5">
           <!-- seina komponenti on muudetud nii, et tema 'sisse' saab panna asju, mis peaks ta peal rippuma, vaikimisi täpselt keskel -->
           <!-- allpoolse a-plane-i küljes on evendid e. sündmused, mis muudavad selle peale vaadates õige teksti nähtavaks (ja ka nähtamatuks) -->
@@ -74,8 +74,8 @@ new Vue({
             ></a-plane>
             <a-text font="https://cdn.aframe.io/fonts/DejaVu-sdf.fnt" position="0 -1.2 0" value="untitled, 2019. Hõbetrükk." align="center" />
         </Wall>
-      	<Wall position="5 0 0" rotation="0 -90 0">  </Wall>
-        <Wall position="0 0 5" rotation="0 -180 0">  </Wall>
+      	<!-- <Wall position="5 0 0" rotation="0 -90 0">  </Wall> -->
+        <!-- <Wall position="0 0 5" rotation="0 -180 0">  </Wall> -->
         <Box  class="hover"
               position="1 0.5 0" 
               shadow="cast: true" 
@@ -84,7 +84,10 @@ new Vue({
               event-set__leave="_event: mouseleave; color: blue"
               
                />
-        <Floor />
+        <Floor position="0 0.01 0" />
+        <!-- keskkond: -->
+        <a-entity environment="preset: forest; dressing: trees; playArea: 100; dressingScale: 30"></a-entity>
+        <!--  -->
       </Scene>
     </Layout>
     `
