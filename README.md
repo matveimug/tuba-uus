@@ -11,13 +11,15 @@ Kui Chrome-is ei tööta, mine aadressile `chrome://flags/`, kirjuta sealsesse o
 1. Kui ei viitsi, vaata [siit](https://www.whatismybrowser.com/detect/what-is-my-local-ip-address). 
 1. See IP-aadress kirjuta oma mobiili aadressiribale, otsa pane koolon ja see number, mis VSCode-is live serveri nupu peal kirjas on (`Port: 5050` näiteks), tulemus peaks olema umbes nii: `192.168.3.123:5050`.
 
-### youtube-i lingid:'
+### youtube-i lingid:
 
 [1](https://youtu.be/Jgw2lmDDKms)
 [2](https://youtu.be/M6AVC-I3n1Y)
 [3](https://youtu.be/cCuSpDbom3E)
 [4](https://youtu.be/aTdLMDUZxkI)
 [5](https://youtu.be/2mUkn9WXBBM)
+[6](https://youtu.be/V1PX2CaU-Bk)
+[7](https://youtu.be/89bUgv2rQfU)
 
 # Aframe:
 
