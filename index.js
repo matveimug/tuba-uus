@@ -20,11 +20,19 @@ new Vue({
 
             <a-asset-item id="chandelier" src="./assets/models/Artichoke_Lamp.obj"></a-asset-item>
             <a-asset-item id="chandelier-mtl" src="./assets/models/Artichoke_Lamp.mtl"></a-asset-item>
-  
+            
+            <a-asset-item id="juku" src="./assets/models/juku.obj"></a-asset-item>
+            <a-asset-item id="juku-mtl" src="./assets/models/juku.mtl"></a-asset-item>
+            
+            <a-asset-item id="nunnu" src="./assets/models/nunnu.obj"></a-asset-item>
           </a-assets>
         </template>
         <!-- blenderist imporditud .obj-mudel koos .mtl-materjalidega; vt a-assets ülalpool -->
         <a-entity class="mannekeen" obj-model="obj: #mannekeen; mtl: #mannekeen-mtl "></a-entity>
+
+        <a-entity position="4 5 -2" rotation="0 -156 0" class="juku" obj-model="obj: #juku; mtl: #juku-mtl"></a-entity>
+
+        <a-entity class="nunnu" obj-model="obj: #nunnu"></a-entity>
         <!-- uus komponent Rig, kus sees on kõik kaameraga seonduv. -->
         <Rig>
           <!-- Rig-i sisse võib panna asju, mis peaks liikuma koos kaameraga, märksõna HUD -->
@@ -79,10 +87,8 @@ new Vue({
         <Box  class="hover"
               position="1 0.5 0" 
               shadow="cast: true" 
-
               event-set__enter="_event: mouseenter; color: red"
               event-set__leave="_event: mouseleave; color: blue"
-              
                />
         <Floor position="0 0.01 0" />
         <!-- keskkond: -->
