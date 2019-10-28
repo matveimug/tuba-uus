@@ -21,7 +21,7 @@ Kui Chrome-is ei tööta, mine aadressile `chrome://flags/`, kirjuta sealsesse o
 [6](https://youtu.be/V1PX2CaU-Bk) 
 [7](https://youtu.be/89bUgv2rQfU) 
 
-# Mobiiliga liikumine
+## Mobiiliga liikumine
 
 https://github.com/Ctrl-Alt-Zen/aframe-mobile-controls/blob/HEAD/components/twoway-motion/README.md
 
