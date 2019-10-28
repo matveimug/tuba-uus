@@ -25,6 +25,10 @@ Kui Chrome-is ei tööta, mine aadressile `chrome://flags/`, kirjuta sealsesse o
 
 https://github.com/Ctrl-Alt-Zen/aframe-mobile-controls/blob/HEAD/components/twoway-motion/README.md
 
+## Mobiiliga pööramine
+
+https://github.com/Ctrl-Alt-Zen/aframe-mobile-controls/blob/2b2695cdd0f65aad2738002b73171a92dac89642/components/tilt-turn/README.md
+
 # Aframe:
 
 - aframe - https://aframe.io/docs/  
