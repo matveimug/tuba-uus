@@ -13,13 +13,17 @@ Kui Chrome-is ei tööta, mine aadressile `chrome://flags/`, kirjuta sealsesse o
 
 ### youtube-i lingid:
 
-[1](https://youtu.be/Jgw2lmDDKms)
-[2](https://youtu.be/M6AVC-I3n1Y)
-[3](https://youtu.be/cCuSpDbom3E)
-[4](https://youtu.be/aTdLMDUZxkI)
-[5](https://youtu.be/2mUkn9WXBBM)
-[6](https://youtu.be/V1PX2CaU-Bk)
-[7](https://youtu.be/89bUgv2rQfU)
+[1](https://youtu.be/Jgw2lmDDKms) 
+[2](https://youtu.be/M6AVC-I3n1Y) 
+[3](https://youtu.be/cCuSpDbom3E) 
+[4](https://youtu.be/aTdLMDUZxkI) 
+[5](https://youtu.be/2mUkn9WXBBM) 
+[6](https://youtu.be/V1PX2CaU-Bk) 
+[7](https://youtu.be/89bUgv2rQfU) 
+
+# Mobiiliga liikumine
+
+https://github.com/Ctrl-Alt-Zen/aframe-mobile-controls/blob/HEAD/components/twoway-motion/README.md
 
 # Aframe:
 
