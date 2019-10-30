@@ -19,7 +19,11 @@ Kui Chrome-is ei tööta, mine aadressile `chrome://flags/`, kirjuta sealsesse o
 [4](https://youtu.be/aTdLMDUZxkI) 
 [5](https://youtu.be/2mUkn9WXBBM) 
 [6](https://youtu.be/V1PX2CaU-Bk) 
-[7](https://youtu.be/89bUgv2rQfU) 
+[7](https://youtu.be/89bUgv2rQfU)  
+[8](https://youtu.be/3kdZHH6yODo)  
+[9](https://youtu.be/nL6dN2oZtSk)  
+[10](https://youtu.be/UCpVgpMdMig)  
+[11](https://youtu.be/Ttn3dLWjXG4) 
 
 ## Mobiiliga liikumine
 
