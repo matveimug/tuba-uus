@@ -25,6 +25,9 @@ new Vue({
             <a-asset-item id="juku-mtl" src="./assets/models/juku.mtl"></a-asset-item>
             
             <a-asset-item id="nunnu" src="./assets/models/nunnu.obj"></a-asset-item>
+
+            <a-asset-item id="tuba" src="./assets/models/tuba.obj"></a-asset-item>
+            <a-asset-item id="tuba-mtl" src="./assets/models/tuba.mtl"></a-asset-item>
           </a-assets>
         </template>
         <!-- blenderist imporditud .obj-mudel koos .mtl-materjalidega; vt a-assets ülalpool -->
@@ -45,11 +48,11 @@ new Vue({
           <a-text id="plakatitekst" value="see on plakat" width="1" align="center" color="#FFF" visible="false" position="0 -0.05 -0.5" />
         </Rig>
         <!-- -->
-        <!-- <Ceiling position="0 5 0">
-          <a-entity material="color: white; emissive: yellow; emissiveIntensity: 2" class="chandelier" position="0 -4.595 0" scale="0.023 0.023 0.023" obj-model="obj: #chandelier"></a-entity>  
-          <a-entity light="type: point; intensity: 0.6; color: #ffffaa; castShadow: true;"  position="0 -1.5 0"></a-entity>
-          <a-entity light="type: ambient; intensity: 0.5; color: #ffffaa"></a-entity>
-        </Ceiling> -->
+        <Ceiling position="0 5 0">
+        <a-entity class="keskkonnavalgus" light="type: point; color: #fff; intensity: 0.8;"  position="0 -2 0" rotation="-15 0 0">
+          <a-entity material="color: white; emissive: white; emissionIntensity: 0.3;" class="chandelier" position="0 -2.595 0" scale="0.023 0.023 0.023" obj-model="obj: #chandelier"></a-entity>
+        </a-entity>            
+        </Ceiling>
       	<Wall position="0 0 -5">
           <!-- seina komponenti on muudetud nii, et tema 'sisse' saab panna asju, mis peaks ta peal rippuma, vaikimisi täpselt keskel -->
           <!-- allpoolse a-plane-i küljes on evendid e. sündmused, mis muudavad selle peale vaadates õige teksti nähtavaks (ja ka nähtamatuks) -->
@@ -82,8 +85,8 @@ new Vue({
             ></a-plane>
             <a-text font="https://cdn.aframe.io/fonts/DejaVu-sdf.fnt" position="0 -1.2 0" value="untitled, 2019. Hõbetrükk." align="center" />
         </Wall>
-      	<!-- <Wall position="5 0 0" rotation="0 -90 0">  </Wall> -->
-        <!-- <Wall position="0 0 5" rotation="0 -180 0">  </Wall> -->
+      	<Wall position="5 0 0" rotation="0 -90 0">  </Wall>
+        <Wall position="0 0 5" rotation="0 -180 0">  </Wall>
         <Box  class="hover"
               position="1 0.5 0" 
               shadow="cast: true" 
@@ -91,9 +94,21 @@ new Vue({
               event-set__leave="_event: mouseleave; color: blue"
                />
         <Floor position="0 0.01 0" />
+        <a-entity class="prose" light="type: spot; angle: 30; penumbra: 0.3; decay: 1; distance: 0.01; intensity: 0.2; color: #fff; castShadow: true;"  position="-2 4 0" rotation="-15 0 0">
+          <a-entity position="0 0 0" scale="0.1 0.1 0.1" class="juku" obj-model="obj: #juku; mtl: #juku-mtl"></a-entity>
+        </a-entity>
+        
+        <a-entity class="prose" light="type: spot; angle: 30; penumbra: 0.3; decay: 1; distance: 0.01; intensity: 0.2; color: #fff; castShadow: true;"  position="2 4 0" rotation="-15 0 0">
+          <a-entity position="0 0 0" scale="0.1 0.1 0.1" class="juku" obj-model="obj: #juku; mtl: #juku-mtl"></a-entity>
+        </a-entity>
+        
+        <a-entity class="prose" light="type: spot; angle: 30; penumbra: 0.3; decay: 1; distance: 0.01; intensity: 0.2; color: #fff; castShadow: true;"  position="2 4 1.6" rotation="-15 77 0">
+          <a-entity position="0 0 0" scale="0.1 0.1 0.1" class="juku" obj-model="obj: #juku; mtl: #juku-mtl"></a-entity>
+        </a-entity>
         <!-- keskkond: -->
-        <a-entity environment="preset: forest; dressing: trees; playArea: 100; dressingScale: 30"></a-entity>
+        <a-entity environment="preset: forest; lighting: none; dressing: trees; playArea: 100; dressingScale: 30"></a-entity>
         <!--  -->
+        <!-- <a-entity position="0 1 0" material="side: double" class="tuba" obj-model="obj: #tuba; mtl: #tuba-mtl"></a-entity> -->
       </Scene>
     </Layout>
     `
