@@ -13,6 +13,8 @@ Kui Chrome-is ei tööta, mine aadressile `chrome://flags/`, kirjuta sealsesse o
 
 ### youtube-i lingid:
 
+[Pleilist](https://www.youtube.com/playlist?list=PLjHo4fPLPthupmg72cyxO9IWDDZzDcX44)
+
 [1](https://youtu.be/Jgw2lmDDKms) 
 [2](https://youtu.be/M6AVC-I3n1Y) 
 [3](https://youtu.be/cCuSpDbom3E) 
@@ -23,7 +25,8 @@ Kui Chrome-is ei tööta, mine aadressile `chrome://flags/`, kirjuta sealsesse o
 [8](https://youtu.be/3kdZHH6yODo)  
 [9](https://youtu.be/nL6dN2oZtSk)  
 [10](https://youtu.be/UCpVgpMdMig)  
-[11](https://youtu.be/Ttn3dLWjXG4) 
+[11](https://youtu.be/Ttn3dLWjXG4)
+
 
 ## Mobiiliga liikumine
 
