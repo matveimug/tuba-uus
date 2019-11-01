@@ -26,14 +26,14 @@ new Vue({
             
             <a-asset-item id="nunnu" src="./assets/models/nunnu.obj"></a-asset-item>
 
-            <a-asset-item id="tuba" src="./assets/models/tuba.obj"></a-asset-item>
-            <a-asset-item id="tuba-mtl" src="./assets/models/tuba.mtl"></a-asset-item>
+            <a-asset-item id="aken" src="./assets/models/aken.obj"></a-asset-item>
+            <a-asset-item id="aken-mtl" src="./assets/models/aken.mtl"></a-asset-item>
           </a-assets>
         </template>
         <!-- blenderist imporditud .obj-mudel koos .mtl-materjalidega; vt a-assets ülalpool -->
         <a-entity class="mannekeen" obj-model="obj: #mannekeen; mtl: #mannekeen-mtl "></a-entity>
 
-        <a-entity position="4 5 -2" rotation="0 -156 0" class="juku" obj-model="obj: #juku; mtl: #juku-mtl"></a-entity>
+        <a-entity position="4 2.5 -2" scale="0.5 0.5 0.5" rotation="0 -156 0" class="juku" obj-model="obj: #juku; mtl: #juku-mtl"></a-entity>
 
         <a-entity class="nunnu" obj-model="obj: #nunnu"></a-entity>
         <!-- uus komponent Rig, kus sees on kõik kaameraga seonduv. -->
@@ -49,7 +49,7 @@ new Vue({
         </Rig>
         <!-- -->
         <Ceiling position="0 5 0">
-        <a-entity class="keskkonnavalgus" light="type: point; color: #fff; intensity: 0.8;"  position="0 -2 0" rotation="-15 0 0">
+        <a-entity class="keskkonnavalgus" light="type: point; color: #fff; intensity: 0.7;"  position="0 -2 0" rotation="-15 0 0">
           <a-entity material="color: white; emissive: white; emissionIntensity: 0.3;" class="chandelier" position="0 -2.595 0" scale="0.023 0.023 0.023" obj-model="obj: #chandelier"></a-entity>
         </a-entity>            
         </Ceiling>
@@ -94,21 +94,21 @@ new Vue({
               event-set__leave="_event: mouseleave; color: blue"
                />
         <Floor position="0 0.01 0" />
-        <a-entity class="prose" light="type: spot; angle: 30; penumbra: 0.3; decay: 1; distance: 0.01; intensity: 0.2; color: #fff; castShadow: true;"  position="-2 4 0" rotation="-15 0 0">
+        <a-entity class="prose" light="type: spot; angle: 30; penumbra: 0.3; intensity: 0.3; color: #fff; castShadow: true;"  position="-2 4 0" rotation="-15 0 0">
           <a-entity position="0 0 0" scale="0.1 0.1 0.1" class="juku" obj-model="obj: #juku; mtl: #juku-mtl"></a-entity>
         </a-entity>
         
-        <a-entity class="prose" light="type: spot; angle: 30; penumbra: 0.3; decay: 1; distance: 0.01; intensity: 0.2; color: #fff; castShadow: true;"  position="2 4 0" rotation="-15 0 0">
+        <a-entity class="prose" light="type: spot; angle: 30; penumbra: 0.3; intensity: 0.3; color: #fff; castShadow: true;"  position="2 4 0" rotation="-15 0 0">
           <a-entity position="0 0 0" scale="0.1 0.1 0.1" class="juku" obj-model="obj: #juku; mtl: #juku-mtl"></a-entity>
         </a-entity>
         
-        <a-entity class="prose" light="type: spot; angle: 30; penumbra: 0.3; decay: 1; distance: 0.01; intensity: 0.2; color: #fff; castShadow: true;"  position="2 4 1.6" rotation="-15 77 0">
+        <a-entity class="prose" light="type: spot; angle: 30; penumbra: 0.3; intensity: 0.3; color: #fff; castShadow: true;"  position="2 4 1.6" rotation="-15 77 0">
           <a-entity position="0 0 0" scale="0.1 0.1 0.1" class="juku" obj-model="obj: #juku; mtl: #juku-mtl"></a-entity>
         </a-entity>
         <!-- keskkond: -->
         <a-entity environment="preset: forest; lighting: none; dressing: trees; playArea: 100; dressingScale: 30"></a-entity>
         <!--  -->
-        <!-- <a-entity position="0 1 0" material="side: double" class="tuba" obj-model="obj: #tuba; mtl: #tuba-mtl"></a-entity> -->
+        <a-entity position="3 0.02 3" material="side: double" class="aken" obj-model="obj: #aken; mtl: #aken-mtl"></a-entity>
       </Scene>
     </Layout>
     `

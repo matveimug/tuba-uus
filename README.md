@@ -48,6 +48,10 @@ https://github.com/Ctrl-Alt-Zen/aframe-mobile-controls/blob/2b2695cdd0f65aad2738
 - https://poly.google.com/blocks - google blocks
 - https://github.com/supermedium/aframe-environment-component - aframe keskkonnad
 
+# MTL-i häkkimine
+
+https://people.sc.fsu.edu/~jburkardt/data/mtl/mtl.html
+
 # Insp:
 
 ## upcoming:
