@@ -34,7 +34,7 @@ new Vue({
         <!-- blenderist imporditud .obj-mudel koos .mtl-materjalidega; vt a-assets ülalpool -->
         <a-entity class="mannekeen" obj-model="obj: #mannekeen; mtl: #mannekeen-mtl "></a-entity>
 
-        <a-entity position="4 2.5 -2" scale="0.5 0.5 0.5" rotation="0 -156 0" class="juku" obj-model="obj: #juku; mtl: #juku-mtl"></a-entity>
+        <a-entity dynamic-body position="4 2.5 -2" scale="0.5 0.5 0.5" rotation="0 -156 0" class="juku" obj-model="obj: #juku; mtl: #juku-mtl"></a-entity>
 
         <a-entity class="nunnu" obj-model="obj: #nunnu"></a-entity>
         <!-- uus komponent Rig, kus sees on kõik kaameraga seonduv. -->
@@ -70,6 +70,7 @@ new Vue({
           font="./assets/signika/Signika-SemiBold-msdf.json" 
           negate="false"
           />
+          <a-box position="0 0 -1" scale="0.1 0.1 0.1" static-body class="box"></a-box>
         </Rig>
         <!-- -->
         <Ceiling position="0 5 0">

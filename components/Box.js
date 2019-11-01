@@ -1,5 +1,5 @@
 export default {
     template: `
-        <a-box class="box"></a-box>
+        <a-box dynamic-body class="box"></a-box>
     `
 }

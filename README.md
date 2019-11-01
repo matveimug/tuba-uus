@@ -57,6 +57,23 @@ https://people.sc.fsu.edu/~jburkardt/data/mtl/mtl.html
 link, kuhu tõsta oma fondifail ja genereerida VR-font.
 https://msdf-bmfont.donmccurdy.com/
 
+# Füüsika häkkimine ja viplala-efekti pärssimine
+
+index.html-faili:
+
+`<!-- füüsika -->
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+  <!--  -->`
+
+kaamera peab olema a-entity sees, mille id="rig" ja millel on parameeter
+`movement-controls="constrainToNavMesh: true;"`
+
+põranda küljes (näiteks) peab olema seega parameeter `nav-mesh`,
+või tee põranda juurde uus plane, näiteks nii:
+`<a-plane material="visible: false" position="0 -0.01 4" rotation="-90 0 0"  nav-mesh width="19" height="19"></a-plane>`
+
+
 # Insp:
 
 ## upcoming:
@@ -78,5 +95,5 @@ https://msdf-bmfont.donmccurdy.com/
 # TODO:
 [x] aknaga sein
 [x] täpitähed
-[ ] viplala kinni keerata
-[ ] uksed avanema
+[ ] viplala kinni keerata (füüsika)
+[ ] uksed avanema, uksekell

@@ -1,13 +1,12 @@
 export default {
   mounted() {
     AFRAME.registerComponent('listener', {
-      tick: function () {
-      }
+      tick: function () {}
     });
   },
   template: `
-        <a-entity id="rig" position="0 0 3">
-          <a-camera listener fov="80" twoway-motion="speed: 35" tilt-turn="criticalAngle: 20">
+        <a-entity id="rig" movement-controls="constrainToNavMesh: true;" position="0 0 0">
+          <a-camera position="0 1.6 0" listener fov="80" look-controls="pointerLockEnabled: true;" wasd-controls="false">
               <a-entity 
                 cursor="fuse:true, fuseTimeout: 50;" raycaster="far: 10; objects: .hover"
                 position="0 0 -1"
