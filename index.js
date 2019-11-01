@@ -32,13 +32,14 @@ new Vue({
           </a-assets>
         </template>
         <!-- blenderist imporditud .obj-mudel koos .mtl-materjalidega; vt a-assets ülalpool -->
-        <a-entity class="mannekeen" obj-model="obj: #mannekeen; mtl: #mannekeen-mtl "></a-entity>
+        <a-sphere dynamic-body color="yellow" v-for="(sphere, index) in 10" :position='"3 0." + index + " 3"' :radius='1-index/10'></a-sphere>
+        <a-entity dynamic-body class="mannekeen" obj-model="obj: #mannekeen; mtl: #mannekeen-mtl "></a-entity>
 
         <a-entity dynamic-body position="4 2.5 -2" scale="0.5 0.5 0.5" rotation="0 -156 0" class="juku" obj-model="obj: #juku; mtl: #juku-mtl"></a-entity>
 
         <a-entity class="nunnu" obj-model="obj: #nunnu"></a-entity>
         <!-- uus komponent Rig, kus sees on kõik kaameraga seonduv. -->
-        <Rig>
+        <Rig position="0 0 4">
           <!-- Rig-i sisse võib panna asju, mis peaks liikuma koos kaameraga, märksõna HUD -->
           <!-- Hetkel on siin tekstid, mis muutuvad nähtavaks, kui vaatad õige asja peale -->
           <a-entity id="pilditekst" visible="false" position="0 -0.2 -0.5">
@@ -70,7 +71,7 @@ new Vue({
           font="./assets/signika/Signika-SemiBold-msdf.json" 
           negate="false"
           />
-          <a-box position="0 0 -1" scale="0.1 0.1 0.1" static-body class="box"></a-box>
+          <a-box material="visible: false" position="0 0 -0.5" scale="0.6 2 0.3" static-body class="box"></a-box>
         </Rig>
         <!-- -->
         <Ceiling position="0 5 0">
@@ -105,18 +106,7 @@ new Vue({
         
         <Wall position="-10 0 -8" rotation="0 90 0" w="6" h="5"></Wall>
         <Wall position="-10 0 5" rotation="0 90 0" w="10" h="5">
-          <a-plane
-                scale="2 2 0"
-                material="src: ./assets/images/pilt.jpg"
-                shadow="cast: true"
-            ></a-plane>
-            <a-text 
-            font="./assets/signika/Signika-SemiBold-msdf.json" 
-            position="0 -1.2 0" 
-            value="untitled, 2019. Hõbetrükk." 
-            align="center" 
-            negate="false"
-            />
+ 
         </Wall>
       	<Wall position="10 0 0" rotation="0 -90 0" w="20" h="5"></Wall>
         <WallWindow class="aknaga sein" position="-5 0 10" rotation="0 -180 0">  </WallWindow>

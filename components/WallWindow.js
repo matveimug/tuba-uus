@@ -1,6 +1,6 @@
 export default {
     template: `
-    	<a-entity>
+    	<a-entity static-body>
             <a-entity position="0 1 0">
                 <!-- aken läheb siia -->
                 <a-entity scale="1.5 1.5 1.5" position="0 0.01 0" rotation="0 90 0" material="side: double; castShadow: true" class="aken" obj-model="obj: #aken; mtl: #aken-mtl"></a-entity>
