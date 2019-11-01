@@ -1,7 +1,13 @@
 export default {
+  mounted() {
+    AFRAME.registerComponent('listener', {
+      tick: function () {
+      }
+    });
+  },
   template: `
         <a-entity id="rig" position="0 0 3">
-          <a-camera fov="80" twoway-motion="speed: 35" tilt-turn="criticalAngle: 20">
+          <a-camera listener fov="80" twoway-motion="speed: 35" tilt-turn="criticalAngle: 20">
               <a-entity 
                 cursor="fuse:true, fuseTimeout: 50;" raycaster="far: 10; objects: .hover"
                 position="0 0 -1"

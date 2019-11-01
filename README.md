@@ -52,6 +52,11 @@ https://github.com/Ctrl-Alt-Zen/aframe-mobile-controls/blob/2b2695cdd0f65aad2738
 
 https://people.sc.fsu.edu/~jburkardt/data/mtl/mtl.html
 
+# Täpitähtede häkkimine
+
+link, kuhu tõsta oma fondifail ja genereerida VR-font.
+https://msdf-bmfont.donmccurdy.com/
+
 # Insp:
 
 ## upcoming:
@@ -68,3 +73,10 @@ https://people.sc.fsu.edu/~jburkardt/data/mtl/mtl.html
 ## gallery & portfolio: 
 - https://store.steampowered.com/app/515020/The_VR_Museum_of_Fine_Art/  
 - https://medium.com/bestfolios/7-inspiring-case-studies-on-vr-and-ar-7235c562844b  
+
+
+# TODO:
+[x] aknaga sein
+[x] täpitähed
+[ ] viplala kinni keerata
+[ ] uksed avanema

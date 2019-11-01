@@ -2,13 +2,14 @@ import Layout from "./components/Layout.js";
 import Scene from "./components/Scene.js";
 import Box from "./components/Box.js";
 import Wall from "./components/Wall.js";
+import WallWindow from "./components/WallWindow.js";
 import Floor from "./components/Floor.js";
 import Ceiling from "./components/Ceiling.js";
 import Rig from "./components/Rig.js";
 
 new Vue({
   el: "#app",
-  components: { Layout, Scene, Box, Wall, Floor, Ceiling, Rig },
+  components: { Layout, Scene, Box, Wall, Floor, Ceiling, Rig, WallWindow  },
   template: `
     <Layout>
       <Scene>
@@ -41,19 +42,42 @@ new Vue({
           <!-- Rig-i sisse võib panna asju, mis peaks liikuma koos kaameraga, märksõna HUD -->
           <!-- Hetkel on siin tekstid, mis muutuvad nähtavaks, kui vaatad õige asja peale -->
           <a-entity id="pilditekst" visible="false" position="0 -0.2 -0.5">
-            <a-text value="see on see uuem pilt" width="1" align="center" color="black" />
+            <a-text 
+            font="./assets/signika/Signika-SemiBold-msdf.json" 
+            negate="false"
+            value="täpitähed: õõõõääö" width="1" align="center" color="black" />
             <a-plane material="shader: flat" color="white" scale="0.5 0.1 0" />
           </a-entity>
-          <a-text id="kuubikutekst" value="see on kuubik" width="1" align="center" color="#FFF" visible="false" position="0 -0.05 -0.5" />
-          <a-text id="plakatitekst" value="see on plakat" width="1" align="center" color="#FFF" visible="false" position="0 -0.05 -0.5" />
+          <a-text 
+          id="kuubikutekst" 
+          value="see on kuubik" 
+          width="1" 
+          align="center" 
+          color="#FFF" 
+          visible="false" 
+          position="0 -0.05 -0.5" 
+          font="./assets/signika/Signika-SemiBold-msdf.json" 
+          negate="false"
+          />
+          <a-text 
+          id="plakatitekst" 
+          value="see on plakat" 
+          width="1" 
+          align="center" 
+          color="#FFF" 
+          visible="false" 
+          position="0 -0.05 -0.5" 
+          font="./assets/signika/Signika-SemiBold-msdf.json" 
+          negate="false"
+          />
         </Rig>
         <!-- -->
         <Ceiling position="0 5 0">
-        <a-entity class="keskkonnavalgus" light="type: point; color: #fff; intensity: 0.7;"  position="0 -2 0" rotation="-15 0 0">
+        <a-entity class="keskkonnavalgus" light="type: point; color: #fff; intensity: 0.7;"  position="0 -2 0" rotation="0 0 0">
           <a-entity material="color: white; emissive: white; emissionIntensity: 0.3;" class="chandelier" position="0 -2.595 0" scale="0.023 0.023 0.023" obj-model="obj: #chandelier"></a-entity>
         </a-entity>            
         </Ceiling>
-      	<Wall position="0 0 -5">
+      	<Wall position="0 0 -10" w="20" h="5">
           <!-- seina komponenti on muudetud nii, et tema 'sisse' saab panna asju, mis peaks ta peal rippuma, vaikimisi täpselt keskel -->
           <!-- allpoolse a-plane-i küljes on evendid e. sündmused, mis muudavad selle peale vaadates õige teksti nähtavaks (ja ka nähtamatuks) -->
           <a-plane 
@@ -77,16 +101,25 @@ new Vue({
               event-set__leave="_event: mouseleave; _target: #pilditekst; visible: false"
           ></a-plane>
         </Wall>
-        <Wall position="-5 0 0" rotation="0 90 0">
+        
+        <Wall position="-10 0 -8" rotation="0 90 0" w="6" h="5"></Wall>
+        <Wall position="-10 0 5" rotation="0 90 0" w="10" h="5">
           <a-plane
                 scale="2 2 0"
                 material="src: ./assets/images/pilt.jpg"
                 shadow="cast: true"
             ></a-plane>
-            <a-text font="https://cdn.aframe.io/fonts/DejaVu-sdf.fnt" position="0 -1.2 0" value="untitled, 2019. Hõbetrükk." align="center" />
+            <a-text 
+            font="./assets/signika/Signika-SemiBold-msdf.json" 
+            position="0 -1.2 0" 
+            value="untitled, 2019. Hõbetrükk." 
+            align="center" 
+            negate="false"
+            />
         </Wall>
-      	<Wall position="5 0 0" rotation="0 -90 0">  </Wall>
-        <Wall position="0 0 5" rotation="0 -180 0">  </Wall>
+      	<Wall position="10 0 0" rotation="0 -90 0" w="20" h="5"></Wall>
+        <WallWindow class="aknaga sein" position="-5 0 10" rotation="0 -180 0">  </WallWindow>
+        <WallWindow class="aknaga sein" position="5 0 10" rotation="0 -180 0">  </WallWindow>
         <Box  class="hover"
               position="1 0.5 0" 
               shadow="cast: true" 
@@ -108,7 +141,6 @@ new Vue({
         <!-- keskkond: -->
         <a-entity environment="preset: forest; lighting: none; dressing: trees; playArea: 100; dressingScale: 30"></a-entity>
         <!--  -->
-        <a-entity position="3 0.02 3" material="side: double" class="aken" obj-model="obj: #aken; mtl: #aken-mtl"></a-entity>
       </Scene>
     </Layout>
     `

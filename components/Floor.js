@@ -4,8 +4,8 @@ export default {
             <a-plane 
             material="src: ./assets/textures/floor.jpg; repeat: 2 4" 
             rotation="-90 0 0" 
-            width="10" 
-            height="10" 
+            width="20" 
+            height="20" 
             ></a-plane>
         </a-entity>
     `
