@@ -32,7 +32,14 @@ new Vue({
           </a-assets>
         </template>
         <!-- blenderist imporditud .obj-mudel koos .mtl-materjalidega; vt a-assets ülalpool -->
-        <a-sphere dynamic-body color="yellow" v-for="(sphere, index) in 10" :position='"3 0." + index + " 3"' :radius='1-index/10'></a-sphere>
+        <Box  class="hover"
+              position="3 3 3" 
+              shadow="cast: true" 
+              event-set__enter="_event: mouseenter; color: red"
+              event-set__leave="_event: mouseleave; color: blue"
+               />
+        <a-sphere dynamic-body material="color: #333; metalness: 0.6; roughness: 0.1" v-for="(sphere, index) in 10" :position='"3 0." + index + " 3"' :radius='index/10'></a-sphere>
+              
         <a-entity dynamic-body class="mannekeen" obj-model="obj: #mannekeen; mtl: #mannekeen-mtl "></a-entity>
 
         <a-entity dynamic-body position="4 2.5 -2" scale="0.5 0.5 0.5" rotation="0 -156 0" class="juku" obj-model="obj: #juku; mtl: #juku-mtl"></a-entity>
@@ -111,12 +118,6 @@ new Vue({
       	<Wall position="10 0 0" rotation="0 -90 0" w="20" h="5"></Wall>
         <WallWindow class="aknaga sein" position="-5 0 10" rotation="0 -180 0">  </WallWindow>
         <WallWindow class="aknaga sein" position="5 0 10" rotation="0 -180 0">  </WallWindow>
-        <Box  class="hover"
-              position="1 0.5 0" 
-              shadow="cast: true" 
-              event-set__enter="_event: mouseenter; color: red"
-              event-set__leave="_event: mouseleave; color: blue"
-               />
         <Floor position="0 0.01 0" />
         <a-entity class="prose" light="type: spot; angle: 30; penumbra: 0.3; intensity: 0.3; color: #fff; castShadow: true;"  position="-2 4 0" rotation="-15 0 0">
           <a-entity position="0 0 0" scale="0.1 0.1 0.1" class="juku" obj-model="obj: #juku; mtl: #juku-mtl"></a-entity>
