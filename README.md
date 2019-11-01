@@ -93,7 +93,7 @@ või tee põranda juurde uus plane, näiteks nii:
 
 
 # TODO:
- [x] aknaga sein 
- [x] täpitähed 
- [x] viplala kinni keerata (füüsika) 
- [ ] uksed avanema, uksekell 
+ [x] aknaga sein  
+ [x] täpitähed  
+ [x] viplala kinni keerata (füüsika)  
+ [ ] uksed avanema, uksekell  
